@@ -1,0 +1,287 @@
+
+
+
+body{
+   
+    margin: 0;
+    padding: 0;
+  
+    font-family: sans-serif;
+}
+section.menu div.menu_corpo{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.92);
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px red solid;
+    z-index: 999;
+    position: fixed;
+}
+
+section.menu div.menu_corpo  input{
+    display: none;
+}
+section.menu div.menu_corpo ul{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 30px;
+}
+section.menu div.menu_corpo ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+section.menu div.menu_corpo ul li a{
+    color:#ff6600 ;
+    text-decoration: none;
+    transition: ease-in-out 1s;
+}
+section.menu div.menu_corpo ul li a:hover{
+    color: white;
+}
+
+         ul li a:hover{
+          padding: 25px 0px;
+          border-bottom: 2px solid #ff6600;
+          color: white;
+                 }
+    
+                 ul li a.class_menu{
+                    padding: 25px 0px;
+                    border-bottom: 2px solid #ff6600;
+                    color: white;
+                           }
+    
+
+section.menu div.menu_corpo  label{
+ display: none; 
+    color: rgb(0, 0, 0);
+    padding:3px 8px;
+    background: linear-gradient(to left,white ,#ff6600);
+    border-radius: 10%;
+    margin-right: 10px;
+   cursor: pointer;
+
+
+   font-size: 17px;
+ 
+    
+}
+section.menu div.menu_corpo div.label{
+
+}
+section.menu div.menu_corpo div label:hover{
+    box-shadow: 0 0 30px #ff6600;
+
+}
+
+section.menu div.menu_corpo div.paragrafo p{
+font-size: 25px;
+position: relative;
+
+
+}
+
+section.menu div.menu_corpo div.paragrafo p::after{
+    content: 'Portifolio';
+    position: absolute;
+    left: 0;
+    color: #ff6600;
+    width: 60%;
+    overflow: hidden;
+    /* animation: anime_folio 4s infinite forwards linear; */
+}
+@keyframes anime_folio{
+    
+    25%, 50%,75%, 100%{
+        width: 100%;
+    }
+}
+section.menu div.menu_corpo div.paragrafo{
+    margin-left: 22px;
+    color: rgb(117, 117, 113);
+    }
+    section.menu div.menu_corpo div.paragrafo{
+       
+        }
+section.menu div.menu_corpo{
+
+}
+
+
+
+div.menu_corpo div.menu{
+
+}
+
+
+section.home div.home{
+width: 100%;
+height: 100vh;
+background: rgb(15, 15, 15);
+display: flex;
+align-items: center;
+justify-content: space-around;
+} 
+
+section.home div.home{
+    background: linear-gradient(rgba(0,0,0,0.92),rgba(0,0,0,0.92)),url(imagens/img_home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    }
+section.home div.home div.foto img{
+
+}
+/* tratamento da minha foto de ferfil */
+section.home div.home div.foto{
+width: 200px;
+height: 200px;
+background: rgb(255, 255, 255);
+border-radius: 50%;
+display: flex;
+position: relative;
+justify-content: center;
+align-items: center;
+position: relative;
+
+
+}
+section.home div.home div.foto::befor{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height:100%;
+   background: linear-gradient(90deg,black,black,#ff6600,#ff6600,black,black);
+    background-position: center;
+    border-radius: 50%;
+    background-size: 100%;
+    box-shadow: 0px 0px 20px #ff6600;
+    animation: anime_borda1 2s infinite forwards linear;
+}
+@keyframes anime_borda1{
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+section.home div.home div.esquerda div#descric{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+   
+
+}
+
+section.home div.home div.esquerda div#descric span#s1{
+color: white;
+background:#ff6600 ;
+padding: 5px 20px ;
+margin-bottom: 20px;
+border-radius:  20px;
+text-align: center; 
+font-size: 25px;
+transform: translateX(-400px);
+animation: alternate anime_s1 1s forwards linear;
+}
+@keyframes anime_s1{
+    to{
+        transform: translateX(0px);  
+    }
+ 
+}
+section.home div.home div.esquerda div#descric span#s2{
+    color: white;
+padding: 3px 0px;
+font-size: 25px;
+border-radius: 20px;
+text-align: center;
+margin-bottom: 30px;
+position: relative;
+transform: translateX(-400px);
+animation: alternate anime_s1 3s forwards linear;
+    }
+    @keyframes anime_s2{
+        to{
+            transform: translateX(0px);  
+        }
+    }
+/* section.home div.home div.esquerda div#descric span#s2::after{
+position: absolute;
+content: '';
+left: 0;
+border-bottom: 2px dotted red;
+bottom: 0;
+width: 10%;
+padding:5px 0px ;
+text-align: center;
+} *
+
+/* 
+botao curriculo */
+
+section.home div.home div.esquerda div#descric span#s3 a {
+    transition: 0.2s;
+    color:#e4e4e4 ;
+    text-decoration: none;
+    padding: 6px 15px ;
+    border: solid 1px #ff6600;
+    border-radius: 5px;
+    position: relative;
+    transition: ease-in-out 1s;
+   text-align: center;
+
+   position: relative;
+   background: transparent;
+}
+section.home div.home div.esquerda div#descric span#s3 a:hover{
+    background: #ff6600;
+    box-shadow: 0 0 30px #ff6600;
+}
+section.home div.home div.esquerda div#descric span#s3{
+    text-align: center;
+    transform: translateY(80px);
+ 
+animation: alternate anime_s3 4s forwards linear;
+}
+@keyframes anime_s3{
+    to{
+      
+        transform: translateY(0px);  
+    }
+}
+
+
+/* responsive home */
+
+@media(max-width:850px){
+
+
+    section.menu div.menu_corpo ul{
+        display: flex;
+        flex-direction: column-reverse;
+       background:white ;
+       align-items: center;
+       width: 300px;
+       height: 100vh;
+       margin-top: 200px;
+    
+    }
+
+    section.menu div.menu_corpo ul{
+
+    
+    }
+    
+    section.menu div.menu_corpo  label{
+        display: block;
+    }
+
+}

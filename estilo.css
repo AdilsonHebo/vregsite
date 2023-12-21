@@ -1,0 +1,526 @@
+body{
+    background: black;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html{
+scroll-behavior: smooth;
+}
+
+
+
+/* tratamento do menu */
+section.menu{
+    width: 100%;
+    position: fixed;
+    top: 0;
+ z-index: 999;
+    height: 70px;
+    background: rgba(0,0,0,0.92);
+    box-shadow: 0 0 0 5px rgba(0, 0, 0 ,0.2);
+}
+
+/* Impoz */
+section.menu h1{
+    float: left;
+    margin-left: 10px;
+    margin-top:20px;
+    position: relative;
+    color: seashell;
+   overflow: hidden;
+}
+section.menu h1::before{
+    content: 'Porti';
+    position: absolute;
+    width: 0%;
+    top: 0;
+    left: 0;
+    height: 100%;
+ 
+    color:#ff6600 ;
+    animation: anime_impoz 1s forwards infinite alternate;
+}
+@keyframes anime_impoz{
+
+    25%,35%,45%,55%,65%, 75%,100%{
+        width: 100%;
+    }
+}
+
+
+
+/* lista nao ordenada */
+section.menu ul li{
+   list-style: none;
+   float: right;
+   margin-right: 15px;
+   margin-top:25px;
+  
+ 
+}
+
+ul li a:hover{
+    padding: 25px 0px;
+    border-bottom: 2px solid #ff6600;
+    color: white;
+           }
+
+           ul li a.class_menu{
+              padding: 25px 0px;
+              border-bottom: 2px solid #ff6600;
+              color: white;
+                     }
+
+
+
+
+@keyframes anime_home_box{
+    to{
+        transform: translateX(0px);
+    }
+}
+
+
+section.menu ul li a{
+    color:#ff6600;
+    text-decoration: none;
+    transition: 1s;
+}
+section.menu ul li a:hover{
+    color: white;
+}
+
+/* estilizando o menu amburguer */
+section.menu label{
+
+    margin-right: 15px;
+  float: right;
+  color: rgb(0, 0, 0);
+  margin-top:20px;
+  background: linear-gradient(to left, white,#ff6600);
+  padding: 4px 8px;
+  border-radius: 50px;
+  cursor: pointer;
+/* 
+  sumindo com menu amburguer */
+  display: none;
+  transition: ease-in-out 0.8s;
+}
+section.menu label.labelboxer {
+    transform: rotate(40deg);
+    border-radius: 8px;
+    background: linear-gradient(to left, white,red);
+
+}
+section.menu label:hover{
+box-shadow: 0 0 30px #ff6600;
+}
+section.menu input{
+    display: none;
+    
+}
+
+/* checando para abertura do menu */
+
+
+
+
+/* responsividade */
+@media(max-width:750px){
+
+    section.menu ul li{
+
+
+    }
+
+    section.menu ul{
+        margin-top: 70px;
+  position: absolute;
+width: 300px;
+height: 100vh;
+background: rgba(0,0,0,0.92);
+
+display: flex;
+flex-direction: column;
+float: left;
+align-items: center;
+margin-left:-350px;
+transition: ease-in-out 0.8s;
+border-radius: 100%;
+
+        
+    }
+    
+input:checked ~ ul{
+    margin-left: 0px;
+    border-radius: 0px;
+   }
+
+   section.menu label{
+       display: block;
+   }
+
+
+
+}
+
+
+
+
+
+
+
+
+/* animacoa meu nome */
+div.list{
+    font-size: 50px;
+}
+
+
+div.list{
+    font-family: sans-serif;
+   
+color: rgb(32, 23, 23);
+font-size: 60px;
+text-transform: uppercase;
+position: relative;
+}
+
+div.list::before{
+
+    content: attr(data-text);
+    position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+color: #ff6600;
+  border-right: 2px solid #ff6600;
+
+ overflow: hidden;
+  animation: w 5s infinite linear;
+}
+@keyframes w{
+
+    0%,100% 
+    {
+        width: 0;
+    }
+   60%,75%, 90%, 95% 
+    {
+        width:100%;
+    }
+}
+
+
+
+/* baneer */
+nav.bannerr{
+    margin-top: 200px;
+}
+
+
+@keyframes eu{
+
+    to{
+opacity: 1;
+transform: translateY(0px);
+    }
+}
+                      /* tela entrada */
+p.adilson{
+    margin: 10px  30px;
+    font-size: 55px;
+    color: white;
+opacity: 0;
+    animation: ade 20s forwards;
+
+transform: translateY(-200px);
+}
+
+
+p.adilson span{
+    color:#02acc3 ;
+    animation: tp 5s forwards infinite ;
+    transition: all 2s;
+}
+
+@keyframes tp{
+   20%, 50%{
+        color:#ffffff ;
+    }
+}
+
+
+
+@keyframes ade{
+
+    to{
+opacity: 1;
+transform: translateY(-5px);
+    }
+}
+/* Botao do curriculo */
+.background a{
+    border: 1px solid #ffffff;
+        padding: 2px 30px;
+        text-decoration: none;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color:#02acc3;
+        border-radius: 5px;
+       margin: 8px  30px;
+        font-size: 20px;
+        opacity: 0;
+        position: absolute;
+       transition: all 1s;
+        animation: forwards buttonn 10s ;
+        transform: translateY(80px);
+    }
+    
+    @keyframes buttonn{
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    
+    .background a:hover{
+      
+        color: white;
+        box-shadow: 0 0 20px #02acc3,0 0 40px#02acc3;
+        background-color: #02acc3;
+        color: #ffffff;
+        border: none;
+      
+    }
+    
+    
+
+
+
+
+
+
+
+
+
+div .list{
+    font-size: 22px;
+    margin-left: 15px;
+}
+
+
+
+
+.conteudo:hover{
+    background-color: rgba(16, 114, 53, 0.774);
+}
+
+/* adicionado oura class */
+
+.menu.luz{
+   
+    transition: .3s;
+   background-color: #02acc3;
+    /* box-shadow: 0 0 7px #0c0d16,0 0 20px  #0c0d16,0 0 5px  #0c0d16,0 0 30px  #0c0d16; */
+}
+
+#branco.letra a{
+   
+    transition: .3s;
+    color: white;
+    /* box-shadow: 0 0 7px #0c0d16,0 0 20px  #0c0d16,0 0 5px  #0c0d16,0 0 30px  #0c0d16; */
+}
+
+
+
+.menu .lista{
+color: white;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.menu .lista li{
+    display: inline-block;
+    list-style: none;
+
+}
+.menu .lista li a{
+    text-decoration: none;
+    color: white;
+   font-size: 20px;
+   margin: 15px 30px;
+   font-family: sans-serif;
+  
+  
+}
+.menu .lista li a:hover{
+    color:#2ac28a ;
+   
+    border-bottom: solid 4px #2ac28a;
+    padding: 40px 0px;
+}
+
+.lista h2 span{
+    color: #2ac28a;
+   
+transition: all .3s;
+    animation:moringa 5s infinite forwards ;
+}
+
+
+
+/*home */
+
+.home{
+    width: 100%;
+   background-image: url(imagens/fundo\ bak.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+    height: 700px;
+    position: relative;
+    background-attachment:fixed ;
+    background-position: right center;
+  
+ 
+    
+}
+
+.background{
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, .6);
+position: absolute;
+}
+.background .eu{
+    color: #2ac28a;
+ 
+}
+.background h1{
+    font-size: 50px;
+    margin-top: 220px;
+    margin-left: 40px;
+color: white;
+}
+
+
+.background h2{
+    padding: 12px 0px;
+    margin-top: -20px;
+    font-size: 20px;
+margin-left: 40px;
+   color: white;
+    }
+
+
+
+
+
+
+ /*   sobre mim */
+
+
+   
+    /* transicoes  jascript puro */
+
+    [data-space]{
+        opacity: 0;
+        transition: all 2s;
+    }
+
+    [data-space="up"]{
+        transform: translate3d(0px, 0p ,100px);
+    }
+    [data-space="left"]{
+        transform: translate3d(-100%, 0px ,0px);
+    }
+
+    [data-space].visi{
+        opacity:1 ;
+        transform: translate3d(0, 0, 0);
+        transition:all 2s;
+    }
+
+
+    /* loaderes */
+    .loarder{
+width: 100%;
+height: 100vh;
+background-color: black;
+position: fixed;
+display: flex;
+top: 0;
+z-index: 999;
+justify-content: center;
+align-items: center;
+color: white;
+font-size: 40px;
+font-family: sans-serif;
+
+    }
+
+    .loarder.invisivel{
+
+animation:loade 10s forwards ;
+    }
+
+    @keyframes loade{
+        100%{
+            visibility: hidden;
+            opacity: 0;
+            display: none;
+        }
+    }  
+
+    div.um{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+       
+        border: 10px solid rgb(66, 61, 61);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 7px #02acc3 , 0 0 25px #02acc3 ,0 0 40px #02acc3;
+    }
+    div.dois{
+        top:-10px;
+        left: -10px;
+        
+        position: absolute;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        border: 10px solid #02acc3;
+        border-left-color:rgb(41, 38, 38) ;
+        border-top-color: rgb(41, 38, 38);
+        box-shadow: 0 0 7px #02acc3 , 0 0 25px #02acc3 ,0 0 40px #02acc3;
+      
+        animation: rodando 2s infinite forwards linear;
+    }
+    
+
+    div.um .conteudo{
+       font-size: 25px;
+       font-family: sans-serif;
+       color: rgb(77, 72, 72) ;
+       
+    }
+
+    
+
+   
+
+
+
+    @keyframes rodando {
+        to{
+            transform: rotate(360deg);
+        }
+
+       
+    }
+
+
